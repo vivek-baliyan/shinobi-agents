@@ -1,10 +1,10 @@
-# Shinobi Agents — Roster & Flow Reference
+# Shinobi Roster — Agent Reference
 
-The shinobi command structure, ready to drop into any workspace. 8 legendary shinobi (dispatched by you, the Hokage), each commanding a squad of max 2 shinobi. Every report ends with **Next shinobi:** — a handoff recommendation; you always do the actual dispatch.
+The Hidden Leaf command structure for this workspace. 8 legendary shinobi (dispatched by you, the Hokage), each commanding a squad of max 2 jonin. Every report ends with **Next shinobi:** — a handoff recommendation; you always do the actual dispatch.
 
 - Legendaries: `model: inherit` — full session capability.
 - Jonin: `model: sonnet` — focused, cheaper strikes. Also directly dispatchable when one focused strike is enough.
-- Squad limits: depth hard-capped at 2 (`CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH` in `.claude/settings.json`); shinobi have no `Agent` tool and can never spawn further.
+- Squad limits: depth hard-capped at 2 (`CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH` in `.claude/settings.json`); jonin have no `Agent` tool and can never spawn further.
 - Definitions live in `.claude/agents/*.md`.
 
 ## The lifecycle flow
@@ -51,7 +51,7 @@ flowchart TD
 - **tsunade** — itachi or orochimaru found something broken; she fixes it and returns it to review.
 - **minato** — something is measurably slow; he optimizes with before/after numbers, then review.
 
-Squads stay off this map — each legendary carries his own 2 shinobi (see per-agent sections below).
+Squads stay off this map — each legendary carries his own 2 jonin (see per-agent sections below).
 
 ---
 
@@ -99,17 +99,17 @@ Squads stay off this map — each legendary carries his own 2 shinobi (see per-a
 - **Squad:** `kabuto` (experiment matrix + encoding findings as tests) · `deidara` (destructive stress runs, instrumented).
 - **Handoffs:** → tsunade (weaknesses need fixes), → hashirama (tests demand implementation changes).
 
-### minato — performance optimization
-- **Work:** Baseline measurement → dominant cost identified with evidence → smallest change that removes it → re-measure. No optimization without before/after numbers; behavior preserved.
+### minato — performance & resource optimization
+- **Work:** Baseline measurement → dominant cost identified with evidence → smallest change that removes it → re-measure. Covers speed (latency, query plans, render cost) and weight (bundle size, memory, token/cost consumption). No optimization without before/after numbers; behavior preserved.
 - **In the flow:** Any stage where something is measurably slow — API latency, bundle size, query plans, render cost.
 - **Squad:** `rocklee` (repeatable benchmarks) ⇄ `obito` (profile interpretation). Measure → interpret → strike → re-measure.
 - **Handoffs:** → tsunade (optimization exposed a bug), → itachi (change needs review).
 
 ---
 
-## The 16 shinobi (directly dispatchable too)
+## Jonin squads (directly dispatchable too)
 
-Each shinobi serves one legendary but can be summoned directly by the Hokage for a single focused strike.
+Each jonin serves one legendary but can be summoned directly by the Hokage for a single focused strike.
 
 | Jonin | Squad | Tools | Work |
 |---|---|---|---|
@@ -143,4 +143,27 @@ Each shinobi serves one legendary but can be summoned directly by the Hokage for
 | orochimaru | `test-driven-development` | `tdd`, `prototype` | — |
 | minato | `systematic-debugging` | `diagnosing-bugs` | review lens |
 
-Jonin inherit their legendary's discipline; kabuto/naruto also carry TDD, shikamaru carries ponytail thinking.
+Shinobi inherit their legendary's discipline; kabuto/naruto also carry TDD, shikamaru carries ponytail thinking.
+
+## Dispatch guide — when to summon whom
+
+**Pick by the question you're asking, not by habit:**
+
+| Your situation | Dispatch |
+|---|---|
+| "How does X work in this repo?" / before any plan or build | **kakashi** |
+| "Which library/version? What does this external API really do?" | **jiraiya** |
+| "I have an idea — turn it into a spec and a plan" | **tobirama** |
+| "Build this plan" | **hashirama** |
+| "Something is broken / failing / flaky" | **tsunade** (→ shizune if vague, sakura for root cause) |
+| "Review this before I merge" | **itachi** (+ orochimaru when the stakes are high) |
+| "Try to break this" | **orochimaru** |
+| "This is slow / heavy / expensive" | **minato** |
+
+**Efficiency rules:**
+
+1. **Don't skip recon.** kakashi → tobirama → hashirama → itachi is the quality chain; every skipped link is rework later. The only legitimate shortcut: tiny fixes go straight to **tsunade** or **hashirama** and then **itachi**.
+2. **Dispatch a shinobi directly for a focused strike** (hinata for one lookup, sasuke for a security scan, rocklee for one benchmark) — cheaper than a full legendary pass.
+3. **One mission, one shinobi.** Don't bundle "research AND plan AND build" into a single dispatch — each handoff gets a fresh-context agent and a **Next shinobi:** recommendation.
+4. **Squads run inside their legendary** (jiraiya runs konan → nagato; you don't dispatch konan yourself unless you want raw gathering only).
+5. **Read-only shinobi are cheap; legendaries are not.** For pure questions, kakashi/hinata/sakura cost a fraction of a hashirama build dispatch.

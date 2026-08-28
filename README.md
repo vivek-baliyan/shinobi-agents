@@ -25,7 +25,7 @@ See [docs/shinobi-roster.md](docs/shinobi-roster.md) for the full mermaid lifecy
 | `tsunade` | debugging & root-cause fixes | shizune (reproduction) · sakura (diagnosis) |
 | `itachi` | code review & security | shisui (spec fidelity) · sasuke (security) |
 | `orochimaru` | adversarial QA & edge cases | kabuto (experiment design) · deidara (stress runs) |
-| `minato` | performance optimization | rocklee (benchmarks) · obito (profile analysis) |
+| `minato` | performance & resource optimization | rocklee (benchmarks) · obito (profile analysis) |
 
 ## Install
 
