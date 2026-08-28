@@ -1,6 +1,6 @@
-# 🍃 Hidden Leaf Agents
+# 🌀 Shinobi Agents
 
-Claude Code subagents themed on the legendary shinobi of Naruto. You are the **Hokage** — 8 legendary agents cover the full dev lifecycle (recon → research → plan → build → debug → review → QA → performance), each commanding a squad of 2 jonin subagents. Every report ends with a **Next shinobi:** recommendation; you always do the dispatching.
+Claude Code subagents themed on the legendary shinobi of Naruto. You are the **Hokage** — 8 legendary agents cover the full dev lifecycle (recon → research → plan → build → debug → review → QA → performance), each commanding a squad of 2 shinobi subagents. Every report ends with a **Next shinobi:** recommendation; you always do the dispatching.
 
 ```
 1. kakashi   → scouts the codebase (recon)
@@ -16,7 +16,7 @@ See [docs/shinobi-roster.md](docs/shinobi-roster.md) for the full mermaid lifecy
 
 ## The roster
 
-| Legendary | Role | Squad (jonin, max 2) |
+| Legendary | Role | Squad (shinobi, max 2) |
 |---|---|---|
 | `kakashi` | codebase recon & intel briefings | neji (structure sweeps) · hinata (precise lookups) |
 | `jiraiya` | deep external research | konan (gathering) · nagato (synthesis) |
@@ -29,13 +29,13 @@ See [docs/shinobi-roster.md](docs/shinobi-roster.md) for the full mermaid lifecy
 
 ## Install
 
-1. Copy the agents into your project (or `~/.claude/agents/` for user-wide):
+1. Copy the agents into your project (or `~/.claude/agents/` for user-wide). The `legendary/` + `shinobi/` split is repo organization only — Claude Code reads them flat from `.claude/agents/`:
 
 ```sh
-cp agents/*.md /path/to/your/project/.claude/agents/
+cp agents/legendary/*.md agents/shinobi/*.md /path/to/your/project/.claude/agents/
 ```
 
-2. Merge `settings.json` into your project's `.claude/settings.json` — it caps subagent spawn depth at 2, so legendaries can summon their squad but jonin can never spawn further:
+2. Merge `settings.json` into your project's `.claude/settings.json` — it caps subagent spawn depth at 2, so legendaries can summon their squad but shinobi can never spawn further:
 
 ```json
 {
@@ -70,9 +70,9 @@ plus the `superpowers` and `ponytail` plugins from the `claude-community` market
 
 ## How squads work
 
-- **Legendaries** (`model: inherit`) may spawn **max 2** named jonin (`model: sonnet`) — the pair is listed in each legendary's `## Squad` section.
-- **Jonin** have no `Agent` tool and can never spawn subagents (platform-enforced via tools + depth cap).
-- Every jonin is also directly dispatchable when a single focused strike is enough.
+- **Legendaries** (`model: inherit`) may spawn **max 2** named shinobi (`model: sonnet`) — the pair is listed in each legendary's `## Squad` section.
+- **Shinobi** have no `Agent` tool and can never spawn subagents (platform-enforced via tools + depth cap).
+- Every shinobi is also directly dispatchable when a single focused strike is enough.
 - Squad dispatch order is encoded in the prompts (e.g. jiraiya runs konan → nagato; minato runs rocklee → obito → rocklee).
 
 ## The workflow extras (optional)

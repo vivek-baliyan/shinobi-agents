@@ -1,10 +1,10 @@
-# Shinobi Roster — Agent Reference
+# Shinobi Agents — Roster & Flow Reference
 
-The Hidden Leaf command structure for this workspace. 8 legendary shinobi (dispatched by you, the Hokage), each commanding a squad of max 2 jonin. Every report ends with **Next shinobi:** — a handoff recommendation; you always do the actual dispatch.
+The shinobi command structure, ready to drop into any workspace. 8 legendary shinobi (dispatched by you, the Hokage), each commanding a squad of max 2 shinobi. Every report ends with **Next shinobi:** — a handoff recommendation; you always do the actual dispatch.
 
 - Legendaries: `model: inherit` — full session capability.
 - Jonin: `model: sonnet` — focused, cheaper strikes. Also directly dispatchable when one focused strike is enough.
-- Squad limits: depth hard-capped at 2 (`CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH` in `.claude/settings.json`); jonin have no `Agent` tool and can never spawn further.
+- Squad limits: depth hard-capped at 2 (`CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH` in `.claude/settings.json`); shinobi have no `Agent` tool and can never spawn further.
 - Definitions live in `.claude/agents/*.md`.
 
 ## The lifecycle flow
@@ -51,7 +51,7 @@ flowchart TD
 - **tsunade** — itachi or orochimaru found something broken; she fixes it and returns it to review.
 - **minato** — something is measurably slow; he optimizes with before/after numbers, then review.
 
-Squads stay off this map — each legendary carries his own 2 jonin (see per-agent sections below).
+Squads stay off this map — each legendary carries his own 2 shinobi (see per-agent sections below).
 
 ---
 
@@ -107,9 +107,9 @@ Squads stay off this map — each legendary carries his own 2 jonin (see per-age
 
 ---
 
-## Jonin squads (directly dispatchable too)
+## The 16 shinobi (directly dispatchable too)
 
-Each jonin serves one legendary but can be summoned directly by the Hokage for a single focused strike.
+Each shinobi serves one legendary but can be summoned directly by the Hokage for a single focused strike.
 
 | Jonin | Squad | Tools | Work |
 |---|---|---|---|
