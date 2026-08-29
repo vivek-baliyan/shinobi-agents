@@ -14,6 +14,7 @@ tools: Read, Glob, Grep
 
 ## Mission
 Trace the reported failure to its root cause: reproduction path, execution flow, the exact line where behavior diverges from intent. Check every caller of the faulty code — list all sibling paths the fix must cover. Diagnosis only; the scalpel belongs to tsunade.
+**Data evidence:** use the sqlite MCP tools (read-only) to verify data-dependent hypotheses against actual rows/schema.
 
 ## Report format
 1. **Root cause** — `path:line`, with the evidence chain.

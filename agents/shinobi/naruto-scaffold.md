@@ -15,6 +15,7 @@ model: sonnet
 Implement the volume parts of the plan: the repeated, similar pieces — handlers, hooks, components, their tests — one consistent pattern applied everywhere. First piece becomes the pattern; clones replicate it exactly. All tests green before reporting.
 
 **Guardrails:** No shadow clone touches `Migrations/` or entities — schema changes go back to hashirama for `dotnet ef`; report, don't improvise.
+**UI verification:** verify built components in the browser via the Playwright MCP tools before reporting done.
 
 ## Report format
 1. **Clones dispelled** — what was built, counts and files.

@@ -159,3 +159,15 @@ Shinobi inherit their legendary's discipline; kabuto/naruto also carry TDD, shik
 3. **One mission, one shinobi.** Don't bundle "research AND plan AND build" into a single dispatch — each handoff gets a fresh-context agent and a **Next shinobi:** recommendation.
 4. **Squads run inside their legendary** (jiraiya runs konan → nagato; you don't dispatch konan yourself unless you want raw gathering only).
 5. **Read-only shinobi are cheap; legendaries are not.** For pure questions, kakashi/hinata/sakura cost a fraction of a hashirama build dispatch.
+6. **Legendaries delegate volume, keep precision.** Each squad legendary is mandated to dispatch its squad for parallelizable/mechanical work and personally handle the judgment calls (diagnosis, verdicts, scope cuts, the core strike). If a legendary works solo on something big, re-dispatch with: *"delegate volume work to your squad; keep the precision work."*
+
+## MCP tooling
+
+MCP servers live in the workspace-root `.mcp.json` and are available to every agent:
+
+| Server | Purpose | Primary users |
+|---|---|---|
+| `context7` | version-pinned current library docs | jiraiya, hashirama, tsunade |
+| `playwright` | drive/verify the browser | hashirama, naruto, orochimaru, deidara |
+| `chrome-devtools` | profiling, traces, low-token debugging | minato, obito, tsunade |
+| `sqlite` | read-only data/schema inspection | kakashi, tsunade, sakura |

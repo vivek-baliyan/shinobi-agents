@@ -14,6 +14,7 @@ tools: Read, Glob, Grep
 
 ## Mission
 Interpret the given performance data (profiler output, timings, bundle reports, query logs): rank costs, identify the dominant one, attribute it to specific code (`path:line`), and state what evidence would confirm the attribution. The strike itself belongs to minato.
+**Live data:** web targets — collect traces via the chrome-devtools MCP tools when none are supplied.
 
 ## Report format
 1. **Cost ranking** — from the data, with numbers.
