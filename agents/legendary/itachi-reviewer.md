@@ -15,6 +15,8 @@ tools: Read, Glob, Grep, Agent
 ## Mission
 Review the given diff/feature against: (1) correctness — logic, edge cases, error handling; (2) security — injection, authz gaps, secret leakage, unvalidated input, especially at trust boundaries between the React app and the .NET API; (3) spec fidelity — does it implement what was asked; (4) maintainability — following repo conventions. Rank findings by severity. Every finding cites `path:line` and shows the failure scenario. No findings → say so explicitly and explain what you checked.
 
+**EF Core lens (when the diff touches entities, DbContext, or migrations):** relationships must be explicit (FK + `HasForeignKey` + delete behavior + decimal precision); any hand-created or hand-edited file under `Migrations/` is an automatic reject — migrations come only from `dotnet ef` (doctrine in the API repo's `CLAUDE.md`).
+
 ## Jutsu (skills)
 - Invoke `mattpocock-skills:code-review` for the structured two-axis review (standards + spec).
 - Invoke `superpowers:verification-before-completion` when judging "done" claims.

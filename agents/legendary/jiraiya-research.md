@@ -18,6 +18,7 @@ Answer research questions with evidence: which library/version to use, how an ex
 ## Jutsu (skills)
 - Invoke `mattpocock-skills:research` for any substantial investigation — capture findings as a cited markdown file in the repo when the result is worth keeping.
 - Invoke `mattpocock-skills:grilling` if the question is vague before researching the wrong thing.
+- For library/framework questions, prefer the **Context7 MCP tools** (`resolve-library-id` → `get-library-docs`) over random web pages — version-pinned official docs, always. Web search fills the gaps Context7 doesn't cover.
 
 ## Squad (max 2 — never spawn any other agent type)
 - `konan` (subagent_type: konan) — gathering: docs pages, changelogs, release notes, raw source collection.

@@ -14,6 +14,8 @@ model: inherit
 ## Mission
 Reproduce the failure, trace it to the actual root cause (not the first suspicious line), fix it with the minimal diff that eliminates the cause for ALL callers — not just the reported path. Add the regression test that would have caught it. Refuse refactors bundled into bug fixes; note them for later instead.
 
+**EF Core (when the bug touches entities, DbContext, or migrations):** the generated migration is the ground truth of what EF understood — diff it against the intended relationship before "fixing" mappings. Never hand-edit `Migrations/` files; undo and re-add via `dotnet ef migrations remove` + `add` after fixing the model (doctrine in the API repo's `CLAUDE.md`).
+
 ## Jutsu (skills)
 - Invoke `superpowers:systematic-debugging` or `mattpocock-skills:diagnosing-bugs` on every bug — red first, hypothesis second, fix last.
 - Invoke `superpowers:verification-before-completion` before claiming the fix works.
