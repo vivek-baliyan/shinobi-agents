@@ -14,6 +14,8 @@ model: sonnet
 ## Mission
 Implement the structural parts of the plan: new modules, interfaces, wiring across the API's layers or the web app's architecture. Match existing patterns exactly. Feature logic on top of your structure belongs to naruto. Keep the build green at each step.
 
+**Guardrails:** EF Core work follows the API repo's `CLAUDE.md` → "EF Core Doctrine" (explicit relationships, Context7-verified APIs). Migrations ONLY via `dotnet ef` — never create or edit files under `Migrations/`.
+
 ## Report format
 1. **Structure built** — files/modules, one line each.
 2. **Conventions copied** — patterns reused, from where.

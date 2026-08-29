@@ -14,6 +14,8 @@ model: sonnet
 ## Mission
 Implement the volume parts of the plan: the repeated, similar pieces — handlers, hooks, components, their tests — one consistent pattern applied everywhere. First piece becomes the pattern; clones replicate it exactly. All tests green before reporting.
 
+**Guardrails:** No shadow clone touches `Migrations/` — schema changes go back to hashirama for `dotnet ef`. If entities/DbContext need changes, stop and report instead of improvising mappings (doctrine: API repo's `CLAUDE.md` → "EF Core Doctrine").
+
 ## Report format
 1. **Clones dispelled** — what was built, counts and files.
 2. **Pattern used** — the one template everything follows, copied from where.

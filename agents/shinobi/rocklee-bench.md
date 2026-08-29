@@ -14,6 +14,8 @@ model: sonnet
 ## Mission
 Run the requested benchmarks: establish baseline, run post-change measurements, N repeats with variance reported, same conditions both sides. Report numbers only — attribution and the optimization belong to obito/minato.
 
+**Guardrails:** Measure, don't modify — no source edits, no schema changes, no `Migrations/` touches while drilling. If a fair benchmark needs a code change, that request is the report.
+
 ## Report format
 1. **Method** — command, repeat count, conditions (identical for before/after).
 2. **Numbers** — baseline vs. after, variance.
