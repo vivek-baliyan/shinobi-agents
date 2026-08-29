@@ -60,58 +60,50 @@ Squads stay off this map — each legendary carries his own 2 jonin (see per-age
 ### kakashi — recon & intel briefings
 - **Work:** Maps a target area end-to-end: entry points, data flow, conventions, gotchas — every claim cited `path:line`. Copies the codebase's existing patterns instead of inventing new ones.
 - **In the flow:** First move on any mission. Produces the intel brief that tobirama plans from. Hands external-docs questions to jiraiya.
-- **Squad:** `neji` (breadth — structure sweeps) + `hinata` (depth — precise lookups); dispatches both in parallel for independent questions.
 - **Handoffs:** → tobirama (intel ready to plan), → jiraiya (question leaves the repo).
 
 ### jiraiya — deep external research
 - **Work:** Researches libraries, APIs, version compatibility, upstream bugs against primary sources (docs, changelogs, source). Checks versions against the repo's actual package files. Findings can be captured as a cited markdown file.
 - **In the flow:** Any time the answer isn't in the village. Feeds verified facts into kakashi's briefs or tobirama's plans.
-- **Squad:** `konan` (gathers raw sources) → `nagato` (synthesizes into one verified answer) — strict order, synthesis needs the material.
 - **Handoffs:** → tobirama (research informs the plan), → kakashi (facts needed inside the repo).
 
 ### tobirama — requirements refinement & mission planning
 - **Work:** Interrogates requirements until acceptance criteria are unambiguous, cuts scope that doesn't serve the goal, and produces ordered, file-exact mission plans executable without further questions.
 - **In the flow:** After recon, before any build. The gate between "idea" and "mission".
-- **Squad:** `ino` (condenses raw intel into a one-page brief) → `shikamaru` (drafts the ordered task plan) — order matters.
 - **Handoffs:** → hashirama (plan approved), → jiraiya (open question needs research).
 
 ### hashirama — feature implementation
 - **Work:** Builds the plan: new features, modules, UI — in small vertical slices, matching existing conventions exactly. All tests green before reporting. Ponytail discipline: minimum code that works.
 - **In the flow:** The build phase. Executes tobirama's missions; his output goes to itachi.
-- **Squad:** `yamato` (structural multi-file work) + `naruto` (volume — many similar pieces). Splits the plan by shape; parallel when independent.
 - **Handoffs:** → itachi (build done, review it), → tsunade (breaks found during build).
 
 ### tsunade — debugging & root-cause fixes
 - **Work:** Reproduces, traces to the true root cause (never the first suspicious line), fixes with the minimal diff covering ALL callers, adds the regression test. No refactors bundled into fixes.
 - **In the flow:** Whenever anything breaks — during build, after review findings, or on production smells.
-- **Squad:** `shizune` (deterministic repro + evidence) → `sakura` (root cause + blast radius). Clear repro in hand → sakura directly.
 - **Handoffs:** → itachi (fix needs review), → minato (the bug is a perf regression).
 
 ### itachi — code review & security
 - **Work:** Reviews diffs on four axes: correctness, security (injection, authz gaps, trust boundaries between web and API), spec fidelity, maintainability. Ranked findings with failure scenarios; explicit about what was checked and is clean.
 - **In the flow:** The quality gate after every build (and after tsunade's fixes). Verdicts: approve / approve-with-fixes / reject.
-- **Squad:** `shisui` (spec fidelity — exactly what was asked) + `sasuke` (security — vulnerability hunt). Both run on the same diff in parallel.
 - **Handoffs:** → tsunade (findings need fixing), → hokage (approved, ship).
 
 ### orochimaru — adversarial QA & edge-case experiments
 - **Work:** Designs and runs the experiments nobody else dares: hostile inputs, boundary values, concurrency, failure injection. Every discovered weakness becomes a passing test. No debris left behind.
 - **In the flow:** After hashirama's build (alongside or after itachi) when confidence must be earned the hard way.
-- **Squad:** `kabuto` (experiment matrix + encoding findings as tests) · `deidara` (destructive stress runs, instrumented).
 - **Handoffs:** → tsunade (weaknesses need fixes), → hashirama (tests demand implementation changes).
 
 ### minato — performance & resource optimization
 - **Work:** Baseline measurement → dominant cost identified with evidence → smallest change that removes it → re-measure. Covers speed (latency, query plans, render cost) and weight (bundle size, memory, token/cost consumption). No optimization without before/after numbers; behavior preserved.
 - **In the flow:** Any stage where something is measurably slow — API latency, bundle size, query plans, render cost.
-- **Squad:** `rocklee` (repeatable benchmarks) ⇄ `obito` (profile interpretation). Measure → interpret → strike → re-measure.
 - **Handoffs:** → tsunade (optimization exposed a bug), → itachi (change needs review).
 
 ---
 
-## Jonin squads (directly dispatchable too)
+## The 16 shinobi (directly dispatchable too)
 
-Each jonin serves one legendary but can be summoned directly by the Hokage for a single focused strike.
+Each shinobi serves one legendary but can be summoned directly by the Hokage for a single focused strike. Dispatch order inside each squad lives in the legendary agent files.
 
-| Jonin | Squad | Tools | Work |
+| Shinobi | Squad | Tools | Work |
 |---|---|---|---|
 | `neji` | kakashi | read-only | 360° structure sweeps: module map, layering, dependency direction, tangles. |
 | `hinata` | kakashi | read-only | Gentle Fist lookups: exact usages, callers, definitions — cited or honestly "not found". |

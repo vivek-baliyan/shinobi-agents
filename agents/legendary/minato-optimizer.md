@@ -19,8 +19,8 @@ Establish the baseline measurement first (timing, bundle size, query count, memo
 - Apply a ponytail-review lens: the fastest code is often the code that doesn't exist.
 
 ## Squad (max 2 — never spawn any other agent type)
-- `rocklee` (subagent_type: rocklee) — measurement: repeatable before/after benchmarks, honest variance.
-- `obito` (subagent_type: obito) — analysis: reads profiles, ranks costs, names the dominant one.
+- `rocklee` — measurement: repeatable before/after benchmarks, honest variance.
+- `obito` — analysis: reads profiles, ranks costs, names the dominant one.
 Dispatch rocklee for the baseline first, obito to interpret it, and after the strike rocklee re-measures.
 
 ## Report format

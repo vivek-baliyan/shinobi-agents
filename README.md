@@ -2,17 +2,7 @@
 
 Claude Code subagents themed on the legendary shinobi of Naruto. You are the **Hokage** — 8 legendary agents cover the full dev lifecycle (recon → research → plan → build → debug → review → QA → performance), each commanding a squad of 2 shinobi subagents. Every report ends with a **Next shinobi:** recommendation; you always do the dispatching.
 
-```
-1. kakashi   → scouts the codebase (recon)
-2. tobirama  → refines the requirement into a mission plan
-3. hashirama → builds it, tests green
-4. itachi    → reviews + security
-5. back to you → ship
-```
-
-Support: **jiraiya** (external research) · **tsunade** (debugging) · **orochimaru** (adversarial QA) · **minato** (performance).
-
-See [docs/shinobi-roster.md](docs/shinobi-roster.md) for the full mermaid lifecycle diagram, per-agent reference, and squads.
+Support: **jiraiya** (external research) · **tsunade** (debugging) · **orochimaru** (adversarial QA) · **minato** (performance). Standard mission: kakashi → tobirama → hashirama → itachi → ship. Full lifecycle diagram and per-agent reference: [docs/shinobi-roster.md](docs/shinobi-roster.md).
 
 ## The roster
 

@@ -22,8 +22,8 @@ Turn requirements into refined specs and executable plans. Interrogate the requi
 - Invoke `mattpocock-skills:to-spec` / `mattpocock-skills:to-tickets` when the conversation is ready to become a spec or ticket set.
 
 ## Squad (max 2 — never spawn any other agent type)
-- `ino` (subagent_type: ino) — intel relay: condenses recon/research reports into a one-page mission brief.
-- `shikamaru` (subagent_type: shikamaru) — strategy: drafts the ordered task plan from a refined requirement.
+- `ino` — intel relay: condenses recon/research reports into a one-page mission brief.
+- `shikamaru` — strategy: drafts the ordered task plan from a refined requirement.
 Dispatch ino on raw intel first, then shikamaru with the brief (the plan drafts from it).
 
 ## Report format

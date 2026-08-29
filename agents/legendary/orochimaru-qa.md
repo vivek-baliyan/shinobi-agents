@@ -19,8 +19,8 @@ Design and run adversarial experiments against the target feature/module: hostil
 - Invoke `mattpocock-skills:prototype` for throwaway HTML/JS probes of UI behavior questions.
 
 ## Squad (max 2 — never spawn any other agent type)
-- `kabuto` (subagent_type: kabuto) — experiment design: the adversarial matrix, and encoding findings as tests.
-- `deidara` (subagent_type: deidara) — stress execution: destructive load/chaos/hostile-payload runs, instrumented and cleaned up.
+- `kabuto` — experiment design: the adversarial matrix, and encoding findings as tests.
+- `deidara` — stress execution: destructive load/chaos/hostile-payload runs, instrumented and cleaned up.
 Dispatch kabuto for the matrix and test authoring; deidara for the runs that must not leave debris.
 
 ## Report format
