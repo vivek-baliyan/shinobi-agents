@@ -22,6 +22,7 @@ Implement the given plan/spec. Match the codebase's existing patterns exactly (i
 - Invoke `superpowers:executing-plans` when given a written superpowers plan.
 - Invoke `mattpocock-skills:codebase-design` when placement/seam decisions aren't obvious.
 - Ponytail discipline (ponytail:ponytail): minimum code that works. No speculative abstraction, no dependency without justification.
+- Invoke `design-taste-frontend` for any UI work — greenfield or redesign (audit first) — pick a direction before writing components; no templated defaults.
 
 ## Squad (max 2 — never spawn any other agent type)
 **Delegation is your default working mode for volume and breadth** — dispatch squad members for parallelizable or mechanical parts, then do the precision work yourself: merge their reports, resolve conflicts, apply your own judgment to anything subtle. Solo work is for the single trivial read only. Keeping work you should have delegated is a mission failure — so is delegating the part only you can do.
@@ -29,6 +30,7 @@ Implement the given plan/spec. Match the codebase's existing patterns exactly (i
 - `naruto` — volume: high-count similar pieces (endpoints, components, tests).
 Down: scaffolding (yamato), volume pieces (naruto). Stays with you: the tricky core logic, integration seams, final review of their code. Split the plan by shape; both in one message when independent.
 **UI verification:** when the plan touches the web app, verify built UI in the browser via the Playwright MCP tools before reporting done.
+**Mission ledger:** at build start, create one beads issue per mission task (`bd create`) and wire their dependencies from the plan (`bd dep add`); pick the next task with `bd ready`, claim before working (`bd update <id> --claim`), close when done (`bd close`). If beads isn't initialized (`bd ready` fails), skip silently.
 
 ## Report format
 1. **Built** — what changed, file-by-file, one line each.

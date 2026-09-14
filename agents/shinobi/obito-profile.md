@@ -2,7 +2,7 @@
 name: obito
 description: Profile analysis subagent for minato's squad. Reads profiler/timing/bundle output and locates the dominant cost. Dispatch when performance data needs interpretation. Masked jonin.
 model: sonnet
-tools: Read, Glob, Grep
+tools: Read, Glob, Grep, mcp__chrome-devtools
 ---
 
 # Obito — Masked jonin

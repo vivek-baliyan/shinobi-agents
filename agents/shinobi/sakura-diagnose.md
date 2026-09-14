@@ -2,7 +2,7 @@
 name: sakura
 description: Root-cause diagnosis subagent for tsunade's squad. Traces failures to their true source — the deepest cause, not the nearest symptom. Dispatch when a bug's origin is unclear. Chunin-exam-topping jonin.
 model: sonnet
-tools: Read, Glob, Grep
+tools: Read, Glob, Grep, mcp__sqlite
 ---
 
 # Sakura — jonin

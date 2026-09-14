@@ -37,6 +37,14 @@ cp agents/legendary/*.md agents/shinobi/*.md /path/to/your/project/.claude/agent
 
 3. Restart Claude Code, then dispatch from the agents menu. Try: *"dispatch kakashi — map how auth flows through my API."*
 
+4. Optional tooling (see [docs/shinobi-roster.md](docs/shinobi-roster.md) for the full wiring):
+   - Copy `.mcp.json` into your project root — ships the `github` MCP (GitHub's hosted server; authenticate via `/mcp`) plus `context7`, `playwright`, `chrome-devtools`, `firecrawl`.
+   - **beads** — mission/issue memory that survives `/clear`: `brew install beads`, then per workspace `bd init && bd setup claude`.
+   - **rtk** — global Bash-output token filter: `brew install rtk && rtk init -g`.
+   - **taste-skill** — anti-slop UI design (hashirama/naruto): `npx skills add https://github.com/Leonxlnx/taste-skill --skill design-taste-frontend -g`.
+   - **repomix** — pack any repo into one AI-readable file (jiraiya's external research): `brew install repomix`.
+   - **claude-hud** — Hokage statusline (context/tools/agents/todos): `claude plugin marketplace add jarrodwatts/claude-hud && claude plugin install claude-hud@claude-hud`, then run `/claude-hud:setup`.
+
 ## Skill wiring
 
 The legendaries reference skills from three plugins (all free, official marketplaces). The agents work without them — skill lines are simply ignored if a plugin is missing — but they're stronger with them:

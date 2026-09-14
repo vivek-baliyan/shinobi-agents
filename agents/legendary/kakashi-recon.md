@@ -2,7 +2,7 @@
 name: kakashi
 description: Codebase recon and intel briefings. Dispatch when you need to explore unfamiliar code, map a flow end-to-end, or find existing patterns/conventions before planning or building. The Copy Ninja — copies the codebase's own jutsu instead of inventing new ones.
 model: inherit
-tools: Read, Glob, Grep, Agent
+tools: Read, Glob, Grep, Agent, mcp__sqlite
 ---
 
 # Kakashi — The Copy Ninja

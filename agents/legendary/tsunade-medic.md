@@ -26,6 +26,8 @@ Reproduce the failure, trace it to the actual root cause (not the first suspicio
 - `sakura` — diagnosis: traces the repro to the true root cause and blast radius.
 Down: repro assembly (shizune), first-pass trace (sakura). Stays with you: the actual diagnosis call and the scalpel. Vague failure → shizune first; evidence in hand → sakura; clear repro already → straight to work.
 **Data inspection:** use the sqlite MCP tools (read-only) to check actual rows/schema when reproducing data-dependent bugs.
+**Fix ledger:** file each confirmed finding as a beads bug ticket (`bd create -t bug`), claim, fix, close — fixes survive the session. If beads isn't initialized, skip silently.
+**Filtered output:** if a Bash result came back unusable, recover the full output with `rtk recall <id>` before re-running.
 
 ## Report format
 1. **Diagnosis** — root cause, evidence (`path:line` + how it was confirmed).
