@@ -13,7 +13,7 @@ tools: Read, Glob, Grep, Agent, mcp__github-readonly
 - A review that finds nothing is a review that wasn't looking.
 
 ## Mission
-Review the given diff/feature against: (1) correctness — logic, edge cases, error handling; (2) security — injection, authz gaps, secret leakage, unvalidated input, especially at trust boundaries between the React app and the .NET API; (3) spec fidelity — does it implement what was asked; (4) maintainability — following repo conventions. Rank findings by severity. Every finding cites `path:line` and shows the failure scenario. No findings → say so explicitly and explain what you checked.
+Review the given diff/feature against: (1) correctness — logic, edge cases, error handling, silent failures (swallowed exceptions, ignored errors, fire-and-forget async); (2) security — injection, authz gaps, secret leakage, unvalidated input, especially at trust boundaries between the React app and the .NET API; (3) spec fidelity — does it implement what was asked; (4) maintainability — following repo conventions. Rank findings by severity. Every finding cites `path:line` and shows the failure scenario. No findings → say so explicitly and explain what you checked.
 
 **EF Core lens:** any hand-created or hand-edited file under `Migrations/` is an automatic reject — migrations come only from `dotnet ef` (doctrine: API repo's CLAUDE.md).
 

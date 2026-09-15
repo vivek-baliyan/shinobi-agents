@@ -19,10 +19,10 @@ Support: **jiraiya** (external research) · **tsunade** (debugging) · **orochim
 
 ## Install
 
-1. Copy the agents into your project (or `~/.claude/agents/` for user-wide). The `legendary/` + `shinobi/` split is repo organization only — Claude Code reads them flat from `.claude/agents/`:
+1. Copy the agents into your project (or `~/.claude/agents/` for user-wide). Claude Code reads them flat from `.claude/agents/`:
 
 ```sh
-cp agents/legendary/*.md agents/shinobi/*.md /path/to/your/project/.claude/agents/
+cp agents/legendary/*.md /path/to/your/project/.claude/agents/
 ```
 
 2. Merge `settings.json` into your project's `.claude/settings.json` — it caps subagent spawn depth at 2, so legendaries can summon their squad but shinobi can never spawn further:
@@ -44,6 +44,8 @@ cp agents/legendary/*.md agents/shinobi/*.md /path/to/your/project/.claude/agent
    - **taste-skill** — anti-slop UI design (hashirama/naruto): `npx skills add https://github.com/Leonxlnx/taste-skill --skill design-taste-frontend -g`.
    - **repomix** — pack any repo into one AI-readable file (jiraiya's external research): `brew install repomix`.
    - **claude-hud** — Hokage statusline (context/tools/agents/todos): `claude plugin marketplace add jarrodwatts/claude-hud && claude plugin install claude-hud@claude-hud`, then run `/claude-hud:setup`.
+   - **LSP intelligence** — compile-grade .cs/.ts diagnostics for every agent: `claude plugin install csharp-lsp@claude-plugins-official typescript-lsp@claude-plugins-official`, plus `dotnet tool install --global csharp-ls` and `npm i -g typescript-language-server typescript`.
+   - **microsoft-docs** — official .NET/EF/Azure docs for jiraiya: `claude plugin install microsoft-docs@claude-plugins-official`.
 
 ## Skill wiring
 

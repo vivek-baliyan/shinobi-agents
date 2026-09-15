@@ -135,7 +135,7 @@ Each shinobi serves one legendary but can be summoned directly by the Hokage for
 | orochimaru | `test-driven-development` | `tdd`, `prototype` | — |
 | minato | `systematic-debugging` | `diagnosing-bugs` | review lens |
 
-Shinobi inherit their legendary's discipline; kabuto/naruto also carry TDD, shikamaru carries ponytail thinking. hashirama/naruto also carry `design-taste-frontend` (taste-skill) for UI builds.
+Shinobi inherit their legendary's discipline; kabuto/naruto also carry TDD, shikamaru carries ponytail thinking. hashirama/naruto also carry `design-taste-frontend` (taste-skill, direction) + `ui-ux-pro-max` (concrete design data) for UI builds; the `frontend-design` plugin is covered by taste-skill and deliberately unreferenced.
 
 ## Dispatch guide — when to summon whom
 
@@ -173,6 +173,7 @@ MCP servers live in the workspace-root `.mcp.json` and are available to every ag
 | `sqlite` | read-only data/schema inspection | kakashi, tsunade, sakura |
 | `github` / `github-readonly` | GitHub's hosted MCP (OAuth via `/mcp`). The `-readonly` entry (`/readonly` URL) is server-enforced read-only — reviewer/planner agents get only that one | tobirama, itachi (readonly); hokage (full) |
 | `firecrawl` | hosted deep web scrape/search/crawl (keyless free tier; add a Bearer key for crawl/map at scale) | konan, jiraiya |
+| `microsoft-learn` | official Microsoft/.NET/Azure/EF docs via the `microsoft-docs` plugin (hosted by Microsoft, no key) | jiraiya |
 
 The `sqlite` entry needs a per-project `--db-path`; add it in the target workspace's own `.mcp.json` rather than here.
 
@@ -187,3 +188,4 @@ Installed system-wide (brew); not MCP — every agent reaches them through Bash.
 | `bd` (beads) | git-backed mission/issue memory: `bd init && bd setup claude` per workspace. Mission plans, review findings, and fix tickets survive `/clear` and compaction. Workflow: `bd ready` → `bd update <id> --claim` → `bd close`. | hashirama (mission tasks → claim/close), tsunade (fix tickets), hokage |
 | `rtk` | global PreToolUse hook that rewrites Bash calls (`git status` → `rtk git status`) and filters output before the LLM sees it. Minato's doctrine applied to the harness itself: token weight cut with zero behavior change. | everyone |
 | `repomix` | packs a repo (local dir or `--remote owner/repo`) into one AI-readable file | jiraiya (external-repo research) |
+| LSP (`csharp-ls`, `typescript-language-server`) | compile-grade diagnostics + symbol intelligence for `.cs`/`.ts`/`.tsx`, harness-level via the `csharp-lsp`/`typescript-lsp` plugins — every agent benefits | read-only squads especially (kakashi, hinata, sakura, shisui) |

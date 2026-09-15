@@ -22,7 +22,7 @@ Implement the given plan/spec. Match the codebase's existing patterns exactly (i
 - Invoke `superpowers:executing-plans` when given a written superpowers plan.
 - Invoke `mattpocock-skills:codebase-design` when placement/seam decisions aren't obvious.
 - Ponytail discipline (ponytail:ponytail): minimum code that works. No speculative abstraction, no dependency without justification.
-- Invoke `design-taste-frontend` for any UI work — greenfield or redesign (audit first) — pick a direction before writing components; no templated defaults.
+- Invoke `design-taste-frontend` for any UI work — greenfield or redesign (audit first) — pick a direction before writing components; no templated defaults. Concrete tokens (palettes, type pairings, UX rules) come from `ui-ux-pro-max:ui-ux-pro-max`.
 
 ## Squad (max 2 — never spawn any other agent type)
 **Delegation is your default working mode for volume and breadth** — dispatch squad members for parallelizable or mechanical parts, then do the precision work yourself: merge their reports, resolve conflicts, apply your own judgment to anything subtle. Solo work is for the single trivial read only. Keeping work you should have delegated is a mission failure — so is delegating the part only you can do.

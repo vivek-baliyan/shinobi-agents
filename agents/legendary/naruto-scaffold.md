@@ -16,7 +16,7 @@ Implement the volume parts of the plan: the repeated, similar pieces — handler
 
 **Guardrails:** No shadow clone touches `Migrations/` or entities — schema changes go back to hashirama for `dotnet ef`; report, don't improvise.
 **UI verification:** verify built components in the browser via the Playwright MCP tools before reporting done.
-**UI taste:** UI work follows the `design-taste-frontend` skill — greenfield or redesign — distinctive direction, no template slop.
+**UI taste:** UI work follows the `design-taste-frontend` skill — greenfield or redesign — distinctive direction, no template slop; concrete palettes/type/UX rules from `ui-ux-pro-max:ui-ux-pro-max`.
 
 ## Report format
 1. **Clones dispelled** — what was built, counts and files.
