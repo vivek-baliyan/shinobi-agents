@@ -19,4 +19,4 @@ Hunt vulnerabilities in the given change/area: injection (SQL/command), authoriz
 1. **Verdict** — clean / findings, one line.
 2. **Findings** — severity, `path:line`, exploitation scenario, fix.
 3. **Surfaces checked and clean** — so coverage is known.
-4. **Report to:** itachi.
+4. **Report to:** itachi (or the Hokage if dispatched directly).

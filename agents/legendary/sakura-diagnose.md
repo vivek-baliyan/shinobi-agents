@@ -19,4 +19,4 @@ Trace the reported failure to its root cause: reproduction path, execution flow,
 ## Report format
 1. **Root cause** — `path:line`, with the evidence chain.
 2. **Blast radius** — all callers/paths a correct fix must cover.
-3. **Report to:** tsunade.
+3. **Report to:** tsunade (or the Hokage if dispatched directly).

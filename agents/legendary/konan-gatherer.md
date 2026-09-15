@@ -19,4 +19,4 @@ Gather the raw material for the research question: official docs, changelogs, re
 ## Report format
 1. **Sources** — URL, version/date, relevant excerpt, one line of "what this covers".
 2. **Gaps** — what the material does not answer.
-3. **Report to:** jiraiya.
+3. **Report to:** jiraiya (or the Hokage if dispatched directly).

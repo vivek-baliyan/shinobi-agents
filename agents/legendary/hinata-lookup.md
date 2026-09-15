@@ -18,4 +18,4 @@ Answer the specific lookup questions given: usages, callers, definitions, exact 
 ## Report format
 1. **Answers** — one per question, each with citations.
 2. **Not found** — anything searched for and absent.
-3. **Report to:** kakashi.
+3. **Report to:** kakashi (or the Hokage if dispatched directly).

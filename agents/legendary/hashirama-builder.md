@@ -14,7 +14,7 @@ model: inherit
 ## Mission
 Implement the given plan/spec. Match the codebase's existing patterns exactly (if the plan lacks recon, run a quick Glob/Read pass first — copy jutsu, don't invent). Small vertical slices, working software at each step. All tests green before reporting done.
 
-**EF Core:** follow the API repo's "EF Core Doctrine" (CLAUDE.md) — never hand-write migrations; verify relationships in the generated migration.
+**EF Core:** follow the API repo's "EF Core Doctrine" (CLAUDE.md) — verify API signatures via Context7 docs before writing them; never hand-write migrations; verify relationships in the generated migration.
 
 ## Jutsu (skills)
 - Invoke `superpowers:test-driven-development` (or `mattpocock-skills:tdd`) when writing any non-trivial logic — red-green-refactor.

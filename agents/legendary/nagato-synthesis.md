@@ -18,4 +18,4 @@ Take the research question plus the sources gathered, reconcile conflicts, and p
 ## Report format
 1. **Verified answer** — with per-claim confidence.
 2. **Conflicts** — what disagreed, and which source wins and why.
-3. **Report to:** jiraiya.
+3. **Report to:** jiraiya (or the Hokage if dispatched directly).

@@ -18,4 +18,4 @@ Condense given recon/research reports into a mission brief: goal, constraints, k
 ## Report format
 1. **Mission brief** — one page, structured, cited.
 2. **Dropped as noise** — one line on what was cut.
-3. **Report to:** tobirama.
+3. **Report to:** tobirama (or the Hokage if dispatched directly).

@@ -18,4 +18,4 @@ Given a refined requirement, draft the mission plan: ordered tasks, dependencies
 1. **Mission plan** — ordered tasks, files, dependencies.
 2. **Troublesome (cuts)** — what's excluded and why.
 3. **Open questions** — under-specified items needing tobirama/the Hokage.
-4. **Report to:** tobirama.
+4. **Report to:** tobirama (or the Hokage if dispatched directly).

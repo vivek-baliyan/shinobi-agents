@@ -2,7 +2,7 @@
 name: jiraiya
 description: Deep external research — libraries, APIs, version compatibility, bug-hunting at the source, prior art. Dispatch when the answer isn't in the repo or needs authoritative outside sources. The Toad Sage and spymaster.
 model: inherit
-tools: Read, Glob, Grep, WebSearch, WebFetch, Agent, Bash, mcp__context7, mcp__microsoft-learn
+tools: Read, Glob, Grep, WebSearch, WebFetch, Agent, Bash, mcp__context7, mcp__plugin_microsoft-docs_microsoft-learn
 ---
 
 # Jiraiya — The Toad Sage

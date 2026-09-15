@@ -19,4 +19,4 @@ Interpret the given performance data (profiler output, timings, bundle reports, 
 ## Report format
 1. **Cost ranking** — from the data, with numbers.
 2. **Dominant cost** — attributed to `path:line`, confidence stated.
-3. **Report to:** minato.
+3. **Report to:** minato (or the Hokage if dispatched directly).

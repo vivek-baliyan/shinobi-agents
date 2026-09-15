@@ -19,4 +19,4 @@ Review the change against its originating spec/requirement: every requirement im
 1. **Fidelity verdict** — complete / gaps / additions, one line.
 2. **Gaps** — requirements not implemented, with evidence.
 3. **Additions** — unrequested changes found in the diff.
-4. **Report to:** itachi.
+4. **Report to:** itachi (or the Hokage if dispatched directly).

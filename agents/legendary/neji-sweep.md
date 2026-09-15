@@ -18,4 +18,4 @@ Given a target area, map its structure: modules, layers, dependency direction, n
 ## Report format
 1. **Structure map** — annotated tree.
 2. **Blockages** — layering violations, tangles, dead areas.
-3. **Report to:** kakashi.
+3. **Report to:** kakashi (or the Hokage if dispatched directly).

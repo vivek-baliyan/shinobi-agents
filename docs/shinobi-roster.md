@@ -172,8 +172,8 @@ MCP servers live in the workspace-root `.mcp.json` and are available to every ag
 | `chrome-devtools` | profiling, traces, low-token debugging | minato, obito, tsunade |
 | `sqlite` | read-only data/schema inspection | kakashi, tsunade, sakura |
 | `github` / `github-readonly` | GitHub's hosted MCP (OAuth via `/mcp`). The `-readonly` entry (`/readonly` URL) is server-enforced read-only — reviewer/planner agents get only that one | tobirama, itachi (readonly); hokage (full) |
-| `firecrawl` | hosted deep web scrape/search/crawl (keyless free tier; add a Bearer key for crawl/map at scale) | konan, jiraiya |
-| `microsoft-learn` | official Microsoft/.NET/Azure/EF docs via the `microsoft-docs` plugin (hosted by Microsoft, no key) | jiraiya |
+| `firecrawl` | hosted deep web scrape/search/crawl (keyless free tier; add a Bearer key for crawl/map at scale) | konan (dispatched by jiraiya) |
+| `microsoft-learn` | official Microsoft/.NET/Azure/EF docs via the `microsoft-docs` plugin (hosted by Microsoft, no key) — grant `mcp__plugin_microsoft-docs_microsoft-learn` | jiraiya |
 
 The `sqlite` entry needs a per-project `--db-path`; add it in the target workspace's own `.mcp.json` rather than here.
 
