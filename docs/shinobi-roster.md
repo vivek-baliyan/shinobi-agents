@@ -5,7 +5,15 @@ The Hidden Leaf command structure for this workspace. 8 legendary shinobi (dispa
 - Legendaries: `model: inherit` — full session capability.
 - Jonin: `model: sonnet` — focused, cheaper strikes. Also directly dispatchable when one focused strike is enough.
 - Squad limits: depth hard-capped at 2 (`CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH` in `.claude/settings.json`); jonin have no `Agent` tool and can never spawn further.
-- Definitions live in `.claude/agents/*.md`.
+- Definitions live in this repo under `agents/<legendary>/` — one folder per legendary, with his definition at the top and his 2 jonin in the `jonin/` subfolder. They land in `.claude/agents/` (same structure) after copying.
+
+```
+agents/
+  <legendary>/
+    <legendary>-<role>.md   # legendary (model: inherit)
+    jonin/
+      <member>.md           # ×2 (model: sonnet)
+```
 
 ## The lifecycle flow
 

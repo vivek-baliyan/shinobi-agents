@@ -19,10 +19,10 @@ Support: **jiraiya** (external research) · **tsunade** (debugging) · **orochim
 
 ## Install
 
-1. Copy the agents into your project (or `~/.claude/agents/` for user-wide). Claude Code reads them flat from `.claude/agents/`:
+1. Copy the agents into your project (or `~/.claude/agents/` for user-wide). Claude Code scans `.claude/agents/` recursively, so each legendary's folder structure is preserved (agent identity comes from the `name:` frontmatter, not the path):
 
 ```sh
-cp agents/legendary/*.md /path/to/your/project/.claude/agents/
+cp -R agents/. /path/to/your/project/.claude/agents/
 ```
 
 2. Merge `settings.json` into your project's `.claude/settings.json` — it caps subagent spawn depth at 2, so legendaries can summon their squad but shinobi can never spawn further:
