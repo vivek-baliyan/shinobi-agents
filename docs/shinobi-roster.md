@@ -2,17 +2,17 @@
 
 The Hidden Leaf command structure for this workspace. 8 legendary shinobi (dispatched by you, the Hokage), each commanding a squad of max 2 jonin. Every report ends with **Next shinobi:** — a handoff recommendation; you always do the actual dispatch.
 
-- Legendaries: `model: inherit` — full session capability.
-- Jonin: `model: sonnet` — focused, cheaper strikes. Also directly dispatchable when one focused strike is enough.
+- Legendaries: `model:` set per agent — `opus` for tobirama and itachi (decisions only), `sonnet` for the rest.
+- Jonin: `model: haiku` — focused, cheapest strikes. Also directly dispatchable when one focused strike is enough.
 - Squad limits: depth hard-capped at 2 (`CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH` in `.claude/settings.json`); jonin have no `Agent` tool and can never spawn further.
 - Definitions live in this repo under `agents/<legendary>/` — one folder per legendary, with his definition at the top and his 2 jonin in the `jonin/` subfolder. They land in `.claude/agents/` (same structure) after copying.
 
 ```
 agents/
   <legendary>/
-    <legendary>-<role>.md   # legendary (model: inherit)
+    <legendary>-<role>.md   # legendary (model per agent)
     jonin/
-      <member>.md           # ×2 (model: sonnet)
+      <member>.md           # ×2 (model: haiku)
 ```
 
 ## The lifecycle flow
