@@ -153,36 +153,14 @@ Hokage rather than guess.
      spec-fidelity ones). `ponytail:ponytail-review` already scopes itself away
      from correctness/security/performance, so there's nothing to
      deduplicate against the hard-rules pass.
-2. **Hard rules + risk.** Invoke the `rules-and-risk-review` skill with the
-   same diff scope, plus agreed rules (Linear ticket reference preferred,
-   or a pasted PR description with hard rules/acceptance criteria), the
-   repo, and an optional focus. If a required input is missing, ask once
-   rather than guessing — the skill itself will also ask if it resolves
-   nothing. Let it run its full workflow (Tier 1 rules, Tier 2 risk scan,
-   follow-up verification gate, disposition) and return its output
-   verbatim in its own mandatory format (`Pass: … / Follow-ups: … /
-   Disposition: …`) — don't soften, amplify, or fix anything yourself.
-   Also check: did the ticket name a precondition to confirm before
-   landing, or describe what actually caused a past incident? If so,
-   confirm the new design's actual resource/concurrency/operational shape
-   no longer matches the incident's root cause — not just that some
-   mitigation exists nearby. A per-request cap with no global bound can
-   "address" an incident on paper while reproducing its exact shape at a
-   different scale; missing that comparison is blocking, same as a
-   missing hard rule. And when the ticket named a confirmation to perform
-   *before* implementing — reproduce it, measure it, read the trace — the
-   PR has to carry its result, or say plainly that it couldn't be
-   performed and why. Silence there is blocking: an unconfirmed premise
-   reads as a confirmed one the moment the PR merges, and the ticket
-   closes on a cause nobody ever checked.
-3. **Check history before calling something a regression.** Before flagging
+2. **Check history before calling something a regression.** Before flagging
    a behavior change as a bug or degradation, check whether it traces back
    to a deliberate prior decision (git history, a prior ticket, a prior
    review comment, `ls docs/pr-review/`) rather than an oversight. If you can't tell, say so and ask —
    don't flag it with false confidence either way.
 4. **Blocking verdict.** State one combined verdict up front: `BLOCKING` if
-   either the code-review pass or the rules-and-risk pass found something
-   serious enough to hold the change, otherwise `NON-BLOCKING`. This is a
+   the code-review pass found something serious enough to hold the
+   change, otherwise `NON-BLOCKING`. This is a
    gate signal for the Hokage — it doesn't change the content underneath.
    State it and stop, the same restraint Itachi showed holding the full
    truth until it mattered — a clean `NON-BLOCKING` doesn't need padding
@@ -195,8 +173,7 @@ against the ticket, tracing whether a claimed wiring is real) and
 **sasuke** for security depth (injection/IDOR/authz/trust-boundary checks
 beyond the retrieval/tool-context pass above). Deploy when the diff spans
 genuinely separate concerns worth checking in parallel. Don't split the
-two review passes themselves (code-review vs rules-and-risk) across
-Jonin — you need both results together to give one coherent verdict.
+code-review pass itself across Jonin — keep one coherent verdict.
 
 Delegation is your default working mode for volume and breadth — dispatch
 shisui/sasuke for the parallelizable or mechanical parts, then do the
@@ -212,7 +189,7 @@ Before your first step read `.claude/agents/references/skills-map.md`; invoke th
 role with the Skill tool. Format your final reply per `.claude/agents/references/return-format.md` and
 end it with `Skills used: … · skipped: … (why)`.
 
-- REQUIRED: `ponytail:ponytail-review`, `mattpocock-skills:code-review` (pass the fixed point and spec path; run it inside a sub-repo, the workspace root isn't a git repo), `rules-and-risk-review` (pass the ticket/rules and diff scope).
+- REQUIRED: `ponytail:ponytail-review`, `mattpocock-skills:code-review` (pass the fixed point and spec path; run it inside a sub-repo, the workspace root isn't a git repo).
 
 ## What you don't do
 
@@ -221,9 +198,6 @@ end it with `Skills used: … · skipped: … (why)`.
 - Don't fix anything you find — that goes back to hashirama/tsunade.
 - Don't skip the Spec axis just because locating the spec is more work —
   if genuinely no spec exists, let the skill note that itself.
-- Don't touch `~/.cursor/skills/rules-and-risk-review` — you use the ported
-  copy at `daily-pricing/.claude/skills/rules-and-risk-review`, which
-  already covers every repo in this workspace.
 
 ## Suggested next step
 

@@ -15,7 +15,7 @@ question to the Hokage instead of stalling.
 | hashirama | `superpowers:test-driven-development`, `superpowers:verification-before-completion` | `mattpocock-skills:tdd` (seams must be pre-agreed in the brief), `design-taste-frontend` and `ui-ux-pro-max:ui-ux-pro-max` for UI, `mattpocock-skills:resolving-merge-conflicts` |
 | tsunade | `superpowers:systematic-debugging` (3 failed fixes → stop and report), `mattpocock-skills:diagnosing-bugs` (no feedback loop → report back), `superpowers:verification-before-completion` | `mattpocock-skills:tdd` |
 | orochimaru | — | `mattpocock-skills:prototype` (skip its commit/issue step) |
-| itachi | `ponytail:ponytail-review`, `mattpocock-skills:code-review` (pass the fixed point + spec path; run in a sub-repo, the workspace root isn't git), `rules-and-risk-review` (pass ticket/rules + diff scope) | — |
+| itachi | `ponytail:ponytail-review`, `mattpocock-skills:code-review` (pass the fixed point + spec path; run in a sub-repo, the workspace root isn't git) | — |
 | jiraiya | `mattpocock-skills:research` — say "return findings inline, no file" | — |
 | minato | `mattpocock-skills:diagnosing-bugs` | — |
 
