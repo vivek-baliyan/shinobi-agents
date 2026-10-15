@@ -233,7 +233,7 @@ Before your first step read `.claude/agents/references/skills-map.md`; invoke th
 role with the Skill tool. Format your final reply per `.claude/agents/references/return-format.md` and
 end it with `Skills used: … · skipped: … (why)`.
 
-- REQUIRED: `mattpocock-skills:writing-for-agents` (specs and plans are agent-facing text).
+- REQUIRED: `writing-for-agents` (specs and plans are agent-facing text).
 - OPTIONAL: `mattpocock-skills:grilling` — a subagent can't wait for answers, so return the first round of numbered questions with your recommended answers to the Hokage; `codebase-design`; `superpowers:writing-plans` for a `docs/plans/` plan (return inline, no extra file, no commit steps). Treat `superpowers:brainstorming` the same way as `domain-modeling` above: use it to think, but write no file under `docs/superpowers/` and make no commit.
 
 ## What you don't do

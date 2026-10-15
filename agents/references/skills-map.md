@@ -11,12 +11,12 @@ question to the Hokage instead of stalling.
 | Role | REQUIRED | OPTIONAL (with the caveat to apply) |
 |---|---|---|
 | kakashi | `graphify` — `graphify query "<q>"` against `graphify-out/graph.json` first, then verify in code | — |
-| tobirama | `mattpocock-skills:writing-for-agents` | `mattpocock-skills:grilling` (return the first round of questions + your recommended answers; the loop can't finish here), `codebase-design`, `superpowers:writing-plans` (plans lane: return inline, no file, drop commit steps), `ponytail:ponytail-review` on a draft |
+| tobirama | `writing-for-agents` | `mattpocock-skills:grilling` (return the first round of questions + your recommended answers; the loop can't finish here), `codebase-design`, `superpowers:writing-plans` (plans lane: return inline, no file, drop commit steps), `ponytail:ponytail-review` on a draft |
 | hashirama | `superpowers:test-driven-development`, `superpowers:verification-before-completion` | `mattpocock-skills:tdd` (seams must be pre-agreed in the brief), `design-taste-frontend` and `ui-ux-pro-max:ui-ux-pro-max` for UI, `mattpocock-skills:resolving-merge-conflicts` |
 | tsunade | `superpowers:systematic-debugging` (3 failed fixes → stop and report), `mattpocock-skills:diagnosing-bugs` (no feedback loop → report back), `superpowers:verification-before-completion` | `mattpocock-skills:tdd` |
 | orochimaru | — | `mattpocock-skills:prototype` (skip its commit/issue step) |
 | itachi | `ponytail:ponytail-review`, `mattpocock-skills:code-review` (pass the fixed point + spec path; run in a sub-repo, the workspace root isn't git) | — |
-| jiraiya | `mattpocock-skills:research` — say "return findings inline, no file" | — |
+| jiraiya | `mattpocock-skills:research` — say "return findings inline, no file" | `paper-search` (`paper-search search "<q>" -s openalex,crossref,arxiv` — name sources explicitly; for papers/specs behind a claim) |
 | minato | `mattpocock-skills:diagnosing-bugs` | — |
 
 ## Not for agents (they stay installed — use them in the main session)

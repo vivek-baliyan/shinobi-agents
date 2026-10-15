@@ -48,6 +48,7 @@ role with the Skill tool. Format your final reply per `.claude/agents/references
 end it with `Skills used: … · skipped: … (why)`.
 
 - REQUIRED: `mattpocock-skills:research` — instruct it to return findings inline, no file.
+- OPTIONAL: `paper-search` — for papers or specs behind a claim; name sources explicitly (`-s openalex,crossref,arxiv`).
 
 ## What you return
 
